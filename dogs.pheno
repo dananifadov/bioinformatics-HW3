@@ -1,0 +1,508 @@
+"Country" "Breed" "Age" "sex" "Body_weight" "FRUCTO"
+"cHD11_100" "Swe" "Labrador Retriever" 3.5 1 30 306
+"cHD11_101" "Swe" "Labrador Retriever" 2.2 1 30 312
+"cHD11_102" "Swe" "Cavalier King Charles Spaniel" 5.3 1 8.9 302
+"cHD11_103" "Swe" "Cavalier King Charles Spaniel" 2 1 9.2 331
+"cHD11_104" "Swe" "Labrador Retriever" 2 1 31.5 311
+"cHD11_105" "Swe" "Labrador Retriever" 2.3 1 27.5 301
+"cHD11_106" "Swe" "Labrador Retriever" 2.8 1 29.3 318
+"cHD11_107" "Swe" "Labrador Retriever" 2.8 1 29.3 348
+"cHD11_108" "Swe" "Dachshund" 3.9 1 10.1 301
+"cHD11_109" "Swe" "Boxer" 5.8 1 37.5 358
+"cHD11_110" "Swe" "Labrador Retriever" 3.7 1 23.3 364
+"cHD11_111" "Swe" "Labrador Retriever" 2.5 1 33.7 310
+"cHD11_112" "Swe" "Boxer" 3.1 1 39 280
+"cHD11_113" "Swe" "Labrador Retriever" 4.9 1 43 329
+"cHD11_114" "Swe" "Cavalier King Charles Spaniel" 5.2 1 12.4 298
+"cHD11_115" "Swe" "Cavalier King Charles Spaniel" 2.3 1 12.6 280
+"cHD11_116" "Swe" "Cavalier King Charles Spaniel" 2.1 1 6.7 239
+"cHD11_117" "Swe" "Cavalier King Charles Spaniel" 3.4 1 9.9 341
+"cHD11_118" "Swe" "Labrador Retriever" 5.5 1 29.2 332
+"cHD11_120" "Swe" "Labrador Retriever" 4 1 39 335
+"cHD11_121" "Swe" "Cavalier King Charles Spaniel" 3 1 9.4 247
+"cHD11_122" "Swe" "Cavalier King Charles Spaniel" 1.9 1 5.9 274
+"cHD11_123" "Swe" "Cavalier King Charles Spaniel" 2.9 1 10.5 284
+"cHD11_124" "Swe" "Boxer" 4.8 1 35.1 300
+"cHD11_125" "Swe" "Boxer" 2.7 1 30.5 293
+"cHD11_126" "Swe" "Boxer" 4.3 1 33.9 332
+"cHD11_127" "Swe" "Boxer" 2.3 1 31.3 291
+"cHD11_128" "Swe" "Boxer" 3 1 37 312
+"cHD11_129" "Swe" "Boxer" 3.6 1 26.9 303
+"cHD11_13" "Bel" "Belgian Shepherd" 2.3 1 38.2 260
+"cHD11_130" "Swe" "Boxer" 2.8 1 29.2 288
+"cHD11_131" "Swe" "Boxer" 2.6 1 31.9 292
+"cHD11_132" "Swe" "Boxer" 2.6 1 29.3 315
+"cHD11_133" "Swe" "Labrador Retriever" 2.3 1 25.4 332
+"cHD11_134" "Swe" "Boxer" 4.5 1 33.4 315
+"cHD11_135" "Swe" "Labrador Retriever" 2.3 1 30.3 330
+"cHD11_136" "Swe" "Cavalier King Charles Spaniel" 5.4 1 10 359
+"cHD11_137" "Swe" "Labrador Retriever" 2.8 1 28.5 302
+"cHD11_138" "Swe" "Boxer" 3.8 1 31.2 349
+"cHD11_139" "Swe" "Cavalier King Charles Spaniel" 3.8 1 10.7 286
+"cHD11_14" "Bel" "Belgian Shepherd" 5.7 1 40.3 261
+"cHD11_140" "Swe" "Dachshund" 4.5 1 10.8 273
+"cHD11_141" "Swe" "Labrador Retriever" 5.5 1 30.8 323
+"cHD11_142" "Swe" "Boxer" 3.2 1 37.5 302
+"cHD11_143" "Swe" "Labrador Retriever" 2.8 1 27.7 338
+"cHD11_144" "Swe" "Boxer" 2.4 1 31 331
+"cHD11_145" "Fra" "Labrador Retriever" 4.2 0 26 304
+"cHD11_146" "Fra" "Labrador Retriever" 4.5 0 29.6 298
+"cHD11_147" "Fra" "Labrador Retriever" 4.1 0 26.4 283
+"cHD11_148" "Fra" "Labrador Retriever" 3 0 32 262
+"cHD11_149" "Fra" "Labrador Retriever" 2.5 0 31 243
+"cHD11_15" "Bel" "Belgian Shepherd" 2.7 1 30 241
+"cHD11_150" "Fra" "Labrador Retriever" 2.7 0 29 240
+"cHD11_151" "Fra" "Labrador Retriever" 2.1 0 30 237
+"cHD11_152" "Fra" "Belgian Shepherd" 2.3 1 24.6 276
+"cHD11_153" "Fra" "Belgian Shepherd" 2.26967830253251 1 34 308
+"cHD11_154" "Fra" "Belgian Shepherd" 3.7 1 23.9 253
+"cHD11_155" "Fra" "Belgian Shepherd" 5.4 1 38 320
+"cHD11_156" "Fra" "Belgian Shepherd" 4.5 1 29.5 248
+"cHD11_157" "Fra" "Belgian Shepherd" 3.2 1 31.6 265
+"cHD11_158" "Fra" "Belgian Shepherd" 2 1 26.6 309
+"cHD11_159" "Fra" "Belgian Shepherd" 2 1 26.2 279
+"cHD11_16" "Bel" "Belgian Shepherd" 3.4 1 30 268
+"cHD11_160" "Fra" "Labrador Retriever" 4.2 0 21.3 258
+"cHD11_161" "Fra" "Belgian Shepherd" 5.7 1 33 282
+"cHD11_162" "Fra" "Belgian Shepherd" 5.5 1 29 310
+"cHD11_163" "Fra" "Belgian Shepherd" 3.5 1 34 230
+"cHD11_164" "Fra" "Belgian Shepherd" 1.9 1 30 221
+"cHD11_165" "Fra" "Belgian Shepherd" 5.1 1 28 207
+"cHD11_166" "Fra" "Labrador Retriever" 5.6 0 38 187
+"cHD11_167" "Fra" "Belgian Shepherd" 4 1 37.6 253
+"cHD11_168" "Fra" "Labrador Retriever" 3.5 0 32 230
+"cHD11_169" "Fra" "Belgian Shepherd" 2.9 1 29 250
+"cHD11_17" "Bel" "Belgian Shepherd" 2.8 1 27.5 260
+"cHD11_170" "Fra" "Belgian Shepherd" 2.8 1 28.6 230
+"cHD11_171" "Fra" "Labrador Retriever" 5.6 0 32.8 284
+"cHD11_172" "Fra" "Belgian Shepherd" 3.3 1 26.7 230
+"cHD11_173" "Fra" "Belgian Shepherd" 4.26009582477755 1 30 250
+"cHD11_175" "Fra" "Belgian Shepherd" 3.1129363449692 1 31.6 269
+"cHD11_176" "Fra" "Belgian Shepherd" 1.7 1 23.3 270
+"cHD11_177" "Fra" "Belgian Shepherd" 2 1 24.5 270
+"cHD11_179" "Fra" "Labrador Retriever" 5 0 30 247
+"cHD11_180" "Fra" "Labrador Retriever" 2.6 0 34 298
+"cHD11_181" "Fra" "Labrador Retriever" 4.9 0 30 323
+"cHD11_182" "Fra" "Labrador Retriever" 3.4 0 30 309
+"cHD11_183" "Fra" "Labrador Retriever" 3.1 0 33 300
+"cHD11_184" "Fra" "Labrador Retriever" 2.9 0 30.5 308
+"cHD11_185" "Fra" "Labrador Retriever" 1.6 0 31 320
+"cHD11_186" "Fra" "Labrador Retriever" 3 0 34 326
+"cHD11_187" "Fra" "Labrador Retriever" 3.1 0 27 279
+"cHD11_188" "Fra" "Labrador Retriever" 3.9 0 30 284
+"cHD11_189" "Fra" "Labrador Retriever" 1.7 0 31 232
+"cHD11_19" "Bel" "Belgian Shepherd" 3.1 1 31 262
+"cHD11_190" "Fra" "Belgian Shepherd" 1.4 1 26 234
+"cHD11_191" "Fra" "Belgian Shepherd" 1.4 1 24 245
+"cHD11_20" "Bel" "Belgian Shepherd" 5.8 1 23.6 290
+"cHD11_21" "Bel" "Belgian Shepherd" 2.9 1 32 278
+"cHD11_22" "Bel" "Belgian Shepherd" 4.3 1 26.5 245
+"cHD11_23" "Bel" "Belgian Shepherd" 5.9 1 25 241
+"cHD11_24" "Bel" "Belgian Shepherd" 3.7 1 26.2 288
+"cHD11_25" "Bel" "Belgian Shepherd" 4.4 1 29 271
+"cHD11_27" "Bel" "Belgian Shepherd" 2.3 1 34 278
+"cHD11_28" "Bel" "Belgian Shepherd" 5.1 1 NA 325
+"cHD11_30" "Bel" "Belgian Shepherd" 2 1 28.4 288
+"cHD11_31" "Bel" "German Shepherd" 2.7 1 NA 278
+"cHD11_32" "Bel" "German Shepherd" 3.9 1 NA 296
+"cHD11_33" "Swe" "Dachshund" 4.5 1 8.1 274
+"cHD11_34" "Swe" "Cavalier King Charles Spaniel" 4.7 1 10.6 263
+"cHD11_35" "Swe" "Dachshund" 2.5 1 10.1 297
+"cHD11_36" "Swe" "Dachshund" 3.2 1 10.3 313
+"cHD11_37" "Swe" "Labrador Retriever" 2.5 1 35.4 333
+"cHD11_38" "Swe" "Labrador Retriever" 2.9 1 27.5 291
+"cHD11_39" "Swe" "Dachshund" 4.2 1 9.3 292
+"cHD11_40" "Swe" "Dachshund" 2.8 1 10.3 228
+"cHD11_41" "Swe" "Labrador Retriever" 2.3 1 28.8 322
+"cHD11_42" "Swe" "Dachshund" 2.4 1 10.5 258
+"cHD11_43" "Swe" "Dachshund" 3.8 1 9.5 304
+"cHD11_44" "Swe" "Labrador Retriever" 4.8 1 25.5 290
+"cHD11_45" "Swe" "Cavalier King Charles Spaniel" 1.7 1 6.6 265
+"cHD11_46" "Swe" "Labrador Retriever" 3 1 24.3 308
+"cHD11_47" "Swe" "Labrador Retriever" 3.2 1 32 307
+"cHD11_48" "Swe" "Cavalier King Charles Spaniel" 2.2 1 9.9 302
+"cHD11_49" "Swe" "Labrador Retriever" 2.8 1 28.9 295
+"cHD11_50" "Swe" "Cavalier King Charles Spaniel" 4.1 1 8.4 244
+"cHD11_51" "Swe" "Cavalier King Charles Spaniel" 2.6 1 8.4 266
+"cHD11_52" "Swe" "Labrador Retriever" 2.8 1 34.1 302
+"cHD11_53" "Swe" "Cavalier King Charles Spaniel" 2.2 1 9.1 278
+"cHD11_54" "Swe" "Cavalier King Charles Spaniel" 3.8 1 8.4 280
+"cHD11_56" "Swe" "Cavalier King Charles Spaniel" 3.9 1 9.7 256
+"cHD11_57" "Swe" "Cavalier King Charles Spaniel" 2.4 1 11.1 296
+"cHD11_58" "Swe" "Labrador Retriever" 2.9 1 26.3 304
+"cHD11_59" "Swe" "Labrador Retriever" 2.1 1 27.9 339
+"cHD11_60" "Swe" "Labrador Retriever" 4 1 27.3 348
+"cHD11_61" "Swe" "Labrador Retriever" 4.8 1 36 340
+"cHD11_62" "Swe" "Labrador Retriever" 4.8 1 29 342
+"cHD11_63" "Swe" "Dachshund" 2 1 11.5 267
+"cHD11_64" "Swe" "Dachshund" 5.8 1 7.6 279
+"cHD11_65" "Swe" "Labrador Retriever" 4.8 1 33.3 286
+"cHD11_66" "Swe" "Cavalier King Charles Spaniel" 3.9 1 8.3 301
+"cHD11_67" "Swe" "Labrador Retriever" 4.3 1 32 295
+"cHD11_68" "Swe" "Dachshund" 4 1 12.3 244
+"cHD11_69" "Swe" "Labrador Retriever" 3 1 26.5 316
+"cHD11_70" "Swe" "Cavalier King Charles Spaniel" 3.3 1 9.7 292
+"cHD11_71" "Swe" "Labrador Retriever" 4 1 28.2 308
+"cHD11_72" "Swe" "Dachshund" NA 1 11.7 260
+"cHD11_73" "Swe" "Labrador Retriever" 3.3 1 35 302
+"cHD11_74" "Swe" "Dachshund" 2 1 11.7 334
+"cHD11_75" "Swe" "Labrador Retriever" NA 1 28.3 341
+"cHD11_76" "Swe" "Labrador Retriever" 3.7 1 38.4 330
+"cHD11_77" "Swe" "Labrador Retriever" 4 1 40.4 340
+"cHD11_79" "Swe" "Labrador Retriever" 4.2 1 39 289
+"cHD11_80" "Swe" "Dachshund" 2.1 1 10.5 305
+"cHD11_81" "Swe" "Cavalier King Charles Spaniel" 2.1 1 7.6 272
+"cHD11_82" "Swe" "Labrador Retriever" 2.1 1 40 312
+"cHD11_83" "Swe" "Labrador Retriever" 4.2 1 37.2 303
+"cHD11_84" "Swe" "Cavalier King Charles Spaniel" 3.7 1 7.9 269
+"cHD11_85" "Swe" "Dachshund" 4.4 1 11.5 244
+"cHD11_86" "Swe" "Cavalier King Charles Spaniel" 3 1 7 230
+"cHD11_87" "Swe" "Cavalier King Charles Spaniel" 4.8 1 8.7 222
+"cHD11_88" "Swe" "Cavalier King Charles Spaniel" NA 1 13.9 297
+"cHD11_89" "Swe" "Cavalier King Charles Spaniel" 4.2 1 11.3 262
+"cHD11_90" "Swe" "Cavalier King Charles Spaniel" 4.1 1 10.1 239
+"cHD11_91" "Swe" "Cavalier King Charles Spaniel" 3.3 1 9.7 259
+"cHD11_92" "Swe" "Cavalier King Charles Spaniel" 2.2 1 9.8 255
+"cHD11_93" "Swe" "Cavalier King Charles Spaniel" 2 1 9.6 266
+"cHD11_94" "Swe" "Labrador Retriever" 5.7 1 27.1 299
+"cHD11_95" "Swe" "Labrador Retriever" 5.9 1 31.6 370
+"cHD11_96" "Swe" "Cavalier King Charles Spaniel" 4.6 1 10.4 327
+"cHD11_97" "Swe" "Labrador Retriever" 4.5 1 32 343
+"cHD11_98" "Swe" "Labrador Retriever" 2.1 1 31.5 306
+"cHD11_99" "Swe" "Labrador Retriever" 2.3 1 23.4 378
+"cHD17_280" "Fra" "Doberman" 3.9 1 43.6 249
+"cHD17_281" "Fra" "Doberman" 1.9 1 46.3 304
+"cHD17_282" "Fra" "Doberman" 4.6 1 41.6 265
+"cHD17_283" "Fra" "Doberman" 3.18685831622177 1 44.6 274
+"cHD17_284" "Fra" "Doberman" 2.6 1 45.6 287
+"cHD17_285" "Fra" "Doberman" 4 1 46.5 263
+"cHD17_286" "Fra" "Doberman" 2.3 1 36 310
+"cHD17_288" "Fra" "Doberman" 2.3 1 44.9 296
+"cHD17_289" "Fra" "Doberman" 3.6 1 49 323
+"cHD17_290" "Fra" "Doberman" 3.73442847364819 1 44.4 241
+"cHD17_291" "Fra" "Doberman" 4.7 1 40 299
+"cHD17_292" "Fra" "Doberman" 5.40451745379877 1 41.5 282
+"cHD17_293" "Fra" "Doberman" 4.6 1 45 268
+"cHD17_294" "Fra" "Doberman" 2 1 40.8 242
+"cHD17_295" "Fra" "Doberman" 2.8 1 42 276
+"cHD17_296" "Fra" "Doberman" 2.2 1 41 228
+"cHD17_297" "Fra" "Doberman" 2.8 1 40 231
+"cHD17_298" "Fra" "Doberman" 1.6 1 42 236
+"cHD17_299" "Fra" "Doberman" 2.7 1 45 192
+"cHD17_300" "Fra" "Doberman" 1.6 1 41 238
+"cHD17_301" "Fra" "Doberman" 2 1 34 197
+"cHD17_302" "Fra" "Doberman" 1.9 1 49 256
+"cHD17_304" "Fra" "Doberman" 3.02532511978097 1 40.8 299
+"cHD17_305" "Fra" "Doberman" 4.9 1 49 236
+"cHD17_317" "Fra" "Doberman" 2.4 1 41.6 217
+"cHD17_318" "Fra" "Labrador Retriever" 5.2 0 24 268
+"cHD17_319" "Fra" "Labrador Retriever" 2.5 0 27 263
+"cHD17_320" "Fra" "Labrador Retriever" 3.3 0 27 296
+"cHD17_321" "Fra" "Labrador Retriever" 5.2 0 29.9 247
+"cHD17_322" "Fra" "Labrador Retriever" 4.5 0 32.5 295
+"cHD17_323" "Fra" "Labrador Retriever" 5.6 0 29 317
+"cHD17_324" "Fra" "Labrador Retriever" 5.5 0 27.5 279
+"cHD17_326" "Fra" "Belgian Shepherd" 5 1 35.6 241
+"cHD17_327" "Fra" "Belgian Shepherd" 2.5 1 26 275
+"cHD17_328" "Fra" "Belgian Shepherd" 3.2 1 26 269
+"cHD17_329" "Fra" "Belgian Shepherd" 4.4 1 31 232
+"cHD17_330" "Fra" "Belgian Shepherd" 3.3 1 34 270
+"cHD8_210" "Bel" "German Shepherd" 3.3 1 30.5 282
+"cHD8_211" "Bel" "German Shepherd" 4.7 1 36 293
+"cHD8_212" "Bel" "German Shepherd" 4.2 1 38.8 276
+"cHD8_213" "Bel" "German Shepherd" 4.8 1 34.2 317
+"cHD8_214" "Bel" "German Shepherd" 3.3 1 33.7 274
+"cHD8_215" "Bel" "German Shepherd" 5.4 1 36.3 285
+"cHD8_216" "Bel" "German Shepherd" 2.7 1 31.5 312
+"cHD8_217" "Bel" "German Shepherd" 2.7 1 38.4 310
+"cHD8_218" "Bel" "German Shepherd" 3.8 1 36 281
+"cHD8_219" "Bel" "German Shepherd" 2.5 1 43.8 255
+"cHD8_220" "Bel" "German Shepherd" 4.3 1 29.95 270
+"cHD8_221" "Bel" "German Shepherd" 5.3 1 33 256
+"cHD8_222" "Bel" "German Shepherd" 4.4 1 45.3 272
+"cHD8_223" "Bel" "German Shepherd" 2.4 1 32.2 238
+"cHD8_224" "Bel" "Belgian Shepherd" 5.8 1 33 281
+"cHD8_225" "Bel" "Belgian Shepherd" 2.8 1 32.15 277
+"cHD8_226" "Bel" "Belgian Shepherd" 2.4 1 21.8 328
+"cHD8_227" "Bel" "Belgian Shepherd" 4.6 1 36.6 299
+"cHD8_228" "Bel" "Belgian Shepherd" 5.8 1 28 299
+"cHD8_229" "Bel" "Belgian Shepherd" 4.9 1 37 291
+"cHD8_230" "Bel" "Belgian Shepherd" 3.1 1 39 336
+"cHD8_231" "Bel" "Belgian Shepherd" 5.5 1 29 317
+"cHD8_232" "Bel" "Belgian Shepherd" 5.3 1 39.5 294
+"cHD8_234" "Bel" "Belgian Shepherd" 5.1 1 30.5 306
+"cHD8_235" "Bel" "Belgian Shepherd" 4.7 1 31 320
+"cHD8_236" "Bel" "Belgian Shepherd" 5.5 1 25.6 293
+"cHD8_238" "Bel" "Belgian Shepherd" 3.4 1 35.5 271
+"cHD8_239" "Bel" "Belgian Shepherd" 2.3 1 28.3 310
+"cHD8_240" "Bel" "Belgian Shepherd" 3.8 1 30.7 293
+"cHD8_241" "Bel" "Belgian Shepherd" 5.5 1 33.5 354
+"cHD8_242" "Bel" "Belgian Shepherd" 3.8 1 35 295
+"cHD8_243" "Bel" "Belgian Shepherd" 4.7 1 29.3 268
+"cHD8_244" "Bel" "Belgian Shepherd" 3.7 1 34.15 289
+"cHD8_245" "Bel" "Belgian Shepherd" 4 1 39 306
+"cHD8_246" "Bel" "Belgian Shepherd" 3.2 1 33.5 301
+"cHD8_247" "Bel" "Belgian Shepherd" 2.6 1 29.8 320
+"cHD8_248" "Bel" "Belgian Shepherd" 3.1 1 25.2 259
+"cHD8_249" "Bel" "Belgian Shepherd" 3.6 1 37 322
+"cHD8_250" "Bel" "Belgian Shepherd" 2.6 1 29 316
+"cHD8_251" "Bel" "Belgian Shepherd" 3.7 1 28.2 302
+"cHD8_252" "Bel" "Belgian Shepherd" 4.8 1 32.2 320
+"cHD8_253" "Bel" "Belgian Shepherd" 3.6 1 29.3 303
+"cHD8_254" "Bel" "Belgian Shepherd" 2.4 1 33.2 296
+"cHD8_255" "Bel" "Belgian Shepherd" 4.4 1 32.1 265
+"cHD8_256" "Bel" "Belgian Shepherd" 2.5 1 32.9 292
+"cHD8_257" "Bel" "Belgian Shepherd" 5.5 1 NA 293
+"cHD8_258" "Bel" "Belgian Shepherd" 3.3 1 NA 290
+"cHD8_259" "Bel" "Belgian Shepherd" 2 1 27.4 301
+"cHD8_260" "Bel" "Belgian Shepherd" 3.1 1 NA 264
+"cHD8_261" "Bel" "Belgian Shepherd" 4.3 1 31.9 280
+"cHD8_262" "Bel" "Belgian Shepherd" 2.5 1 24.7 281
+"cHD8_263" "Bel" "Belgian Shepherd" 4.5 1 29.8 253
+"cHD8_264" "Bel" "Belgian Shepherd" 5.8 1 33 286
+"cHD8_265" "Bel" "Belgian Shepherd" 2.9 1 30 294
+"cHD8_266" "Bel" "Belgian Shepherd" 5.1 1 29.2 264
+"cHD8_267" "Bel" "Belgian Shepherd" 5.3 1 NA 286
+"cHD8_268" "Bel" "Belgian Shepherd" 3.1 1 36.2 283
+"cHD8_269" "Bel" "Belgian Shepherd" 2.3 1 35.3 283
+"cHD8_270" "Bel" "Belgian Shepherd" 2.9 1 30.25 299
+"cHD8_271" "Bel" "Belgian Shepherd" 2.3 1 32.3 275
+"cHD8_272" "Bel" "Belgian Shepherd" 2.4 1 36.5 301
+"cHD8_273" "Bel" "Belgian Shepherd" 4.1 1 28 255
+"cHD8_274" "Bel" "Belgian Shepherd" 3.3 1 32.3 254
+"cHD8_275" "Bel" "Belgian Shepherd" 3.3 1 37.6 256
+"cHD8_276" "Bel" "Belgian Shepherd" 3.8 1 28.3 277
+"cHD8_277" "Bel" "Belgian Shepherd" 2.6 1 30 269
+"cHD8_278" "Bel" "Belgian Shepherd" 2.5 1 26.4 262
+"cHD8_279" "Bel" "Belgian Shepherd" 3.3 1 26.5 258
+"cHD8_280" "Bel" "Belgian Shepherd" 5.3 1 29 238
+"cHD8_281" "Bel" "Belgian Shepherd" 2.5 1 23.6 248
+"cHD8_282" "Bel" "Belgian Shepherd" 2.6 1 27.5 258
+"cHD8_283" "Bel" "Belgian Shepherd" 2.8 1 27.7 273
+"cHD8_284" "Bel" "Belgian Shepherd" 3 1 43.2 247
+"cHD8_285" "Bel" "Belgian Shepherd" 5.2 1 30.4 276
+"cHD8_286" "Bel" "Belgian Shepherd" 5.9 1 34 238
+"cHD8_287" "Bel" "Belgian Shepherd" 4.9 1 28 257
+"cHD8_288" "Bel" "Belgian Shepherd" 4.8 1 25.3 249
+"cHD8_289" "Bel" "Belgian Shepherd" 5.3 1 41.5 209
+"cHD8_290" "Bel" "Belgian Shepherd" 5.5 1 31.2 306
+"cHD8_291" "Bel" "Belgian Shepherd" 2.5 1 27.5 256
+"cHD8_292" "Bel" "Belgian Shepherd" 5.6 1 30.5 285
+"cHD8_293" "Bel" "Belgian Shepherd" 5.6 1 33.5 273
+"cHD8_294" "Bel" "Belgian Shepherd" 2.8 1 34.15 295
+"cHD8_295" "Bel" "Belgian Shepherd" 5.9 1 34 278
+"cHD8_297" "Bel" "Belgian Shepherd" 2.5 1 NA 254
+"cHD8_298" "Bel" "Belgian Shepherd" 2.5 1 36.4 283
+"cHD8_299" "Bel" "Belgian Shepherd" 2.5 1 33.2 291
+"cHD8_300" "Bel" "Belgian Shepherd" 2.6 1 29.25 267
+"cHD8_301" "Bel" "Belgian Shepherd" 4.8 1 34.5 286
+"cHD8_302" "Bel" "Belgian Shepherd" 3.3 1 25.8 236
+"cHD8_303" "Bel" "Belgian Shepherd" 4.5 1 29.6 255
+"cHD8_304" "Bel" "Belgian Shepherd" 4.9 1 29.6 229
+"cHD8_305" "Bel" "Labrador Retriever" 5.5 1 37.5 301
+"cHD8_306" "Bel" "Labrador Retriever" 6 1 37.7 284
+"cHD8_307" "Bel" "Labrador Retriever" 4.6 1 35.5 335
+"cHD8_308" "Bel" "Labrador Retriever" 4.3 1 34 277
+"cHD8_309" "Bel" "Labrador Retriever" 2.4 1 38 273
+"cHD8_310" "Bel" "Labrador Retriever" 5.3 1 42.5 301
+"cHD8_364" "Fin" "Finnish Lapphund" 3.7 1 21.4 306
+"cHD8_365" "Fin" "Finnish Lapphund" 4.7 1 18.2 273
+"cHD8_366" "Fin" "Finnish Lapphund" 3.7 1 25 302
+"cHD8_367" "Fin" "Finnish Lapphund" 2.9 1 22.3 306
+"cHD8_368" "Fin" "Finnish Lapphund" 4.6 1 22.8 336
+"cHD8_369" "Fin" "Finnish Lapphund" 5 1 25 329
+"cHD8_370" "Fin" "Finnish Lapphund" 2.1 1 22.6 317
+"cHD8_371" "Fin" "Finnish Lapphund" 3.8 1 17.5 342
+"cHD8_372" "Fin" "Finnish Lapphund" 2.4 1 17.1 275
+"cHD8_373" "Fin" "Finnish Lapphund" 5 1 19.4 289
+"cHD8_374" "Fin" "Finnish Lapphund" 4.4 1 21.6 317
+"cHD8_375" "Fin" "Finnish Lapphund" 2 1 17 326
+"cHD8_376" "Fin" "Finnish Lapphund" 4.1 1 16.9 307
+"cHD8_377" "Fin" "Finnish Lapphund" 2.9 1 15.6 283
+"cHD8_378" "Fin" "Finnish Lapphund" 3.7 1 20.7 302
+"cHD8_379" "Fin" "Finnish Lapphund" 4.6 1 16.5 295
+"cHD8_380" "Fin" "Finnish Lapphund" 5 1 16.4 285
+"cHD8_381" "Fin" "Finnish Lapphund" 2.3 1 16.5 288
+"cHD8_465" "Den" "Labrador Retriever" 2.8 0 26 336
+"cHD8_466" "Den" "Newfoundland" 5.3 0 NA 311
+"cHD8_467" "Den" "Newfoundland" 3.7 0 61 301
+"cHD8_468" "Den" "Labrador Retriever" 6 0 25.2 327
+"cHD8_469" "Den" "Labrador Retriever" 3.3 0 32 320
+"cHD8_471" "Den" "Labrador Retriever" 2.8 0 26.8 325
+"cHD8_472" "Den" "Labrador Retriever" 2.5 0 28 376
+"cHD8_473" "Den" "Labrador Retriever" 4.3 0 33 308
+"cHD8_474" "Den" "Labrador Retriever" 4.4 0 31.5 268
+"cHD8_475" "Den" "Labrador Retriever" 2 0 22 306
+"cHD8_476" "Den" "Newfoundland" NA 0 NA 363
+"cHD8_477" "Den" "Labrador Retriever" 3.8 0 32 327
+"cHD8_478" "Den" "Newfoundland" 2 0 51 320
+"cHD8_479" "Den" "Labrador Retriever" 1.8 0 26 371
+"cHD8_480" "Den" "Newfoundland" 2.5 0 52 321
+"cHD8_481" "Den" "Newfoundland" 2.4 0 47 351
+"cHD8_482" "Den" "Labrador Retriever" 3.7 0 26 308
+"cHD8_483" "Den" "Newfoundland" 5.7 0 50 333
+"cHD8_484" "Den" "Newfoundland" 4.8 0 47 325
+"cHD8_485" "Den" "Labrador Retriever" 4.3 0 30.5 322
+"cHD8_486" "Den" "Newfoundland" 3.3 0 47 346
+"cHD8_487" "Den" "Newfoundland" 2.9 0 52.5 333
+"cHD8_488" "Den" "Labrador Retriever" 4.4 0 31 350
+"cHD8_490" "Den" "Labrador Retriever" 4.3 0 30.5 360
+"cHD8_491" "Den" "Labrador Retriever" 3.5 0 28 314
+"cHD8_492" "Den" "Newfoundland" 4.3 0 56 323
+"cHD8_493" "Den" "Labrador Retriever" 3.2 0 26.4 283
+"cHD8_494" "Den" "Labrador Retriever" 3.7 0 20.8 309
+"cHD8_495" "Den" "Newfoundland" 2.8 0 54.5 337
+"cHD8_496" "Den" "Labrador Retriever" 3.8 0 29.3 304
+"cHD8_497" "Den" "Newfoundland" 2.3 0 47.6 318
+"cHD8_499" "Den" "Labrador Retriever" 2.3 0 31.5 319
+"cHD8_500" "Den" "Labrador Retriever" 3 0 32 332
+"cHD8_501" "Den" "Labrador Retriever" 3.5 0 31 330
+"cHD8_503" "Den" "Newfoundland" 3.3 0 53 340
+"cHD8_504" "Den" "Newfoundland" 3.8 0 47.2 360
+"cHD8_505" "Den" "Labrador Retriever" 3.7 0 30.5 289
+"cHD8_506" "Den" "Labrador Retriever" 3.2 0 28.8 322
+"cHD8_507" "Den" "Newfoundland" 3.2 0 43 355
+"cHD8_508" "Den" "Newfoundland" 2.7 0 62 344
+"cHD8_509" "Den" "Newfoundland" 3.8 0 61 320
+"cHD8_510" "Den" "Newfoundland" 3.8 0 66.2 330
+"cHD8_511" "Den" "Labrador Retriever" 2.6 0 23.5 277
+"cHD8_512" "Den" "Labrador Retriever" 2.5 0 34 312
+"cHD8_513" "Den" "Newfoundland" 2.3 0 42 352
+"cHD8_514" "Den" "Newfoundland" 2.7 0 61.2 351
+"cHD8_515" "Den" "Labrador Retriever" 2.7 0 31.5 278
+"cHD8_516" "Den" "Labrador Retriever" 2.3 0 32 277
+"cHD8_518" "Den" "Newfoundland" 2.3 0 59.2 289
+"cHD8_519" "Den" "Labrador Retriever" 5.8 0 31 298
+"cHD8_521" "Den" "Newfoundland" 2.5 0 46.5 249
+"cHD8_522" "Den" "Newfoundland" 4.3 0 54.6 349
+"cHD8_524" "Den" "Newfoundland" 2.2 0 57 359
+"cHD8_525" "Den" "Labrador Retriever" 5.4 0 28.2 343
+"cHD8_526" "Den" "Labrador Retriever" 2.6 0 31.5 322
+"cHD8_528" "Den" "Labrador Retriever" 2.9 0 27 315
+"cHD8_529" "Den" "Newfoundland" 3.7 0 55 334
+"cHD8_531" "Den" "Newfoundland" 2.1 0 55.5 355
+"cHD8_532" "Den" "Newfoundland" 2.6 0 47.8 343
+"cHD8_533" "Den" "Labrador Retriever" 2.6 0 23.5 300
+"cHD8_534" "Den" "Newfoundland" 3.8 0 56.8 333
+"cHD8_535" "Den" "Newfoundland" 2.5 0 56.8 325
+"cHD8_536" "Den" "Labrador Retriever" 2.4 0 28 308
+"cHD8_538" "Den" "Newfoundland" 4.2 0 58.7 332
+"cHD8_539" "Den" "Labrador Retriever" 3 0 23.5 326
+"cHD8_541" "Den" "Newfoundland" 3.5 0 59.15 345
+"cHD8_542" "Den" "Labrador Retriever" 3.3 0 23.9 297
+"cHD8_543" "Den" "Labrador Retriever" 4.2 0 22.5 291
+"cHD8_544" "Den" "Labrador Retriever" 3.7 0 30.6 319
+"cHD8_545" "Den" "Newfoundland" 2.4 0 54.4 351
+"cHD8_546" "Den" "Labrador Retriever" 5 0 26.7 290
+"cHD8_547" "Den" "Newfoundland" 2.8 0 56 294
+"cHD8_548" "Den" "Labrador Retriever" 4.6 0 33 309
+"cHD8_549" "Den" "Newfoundland" 2.7 0 64 367
+"cHD8_550" "Den" "Labrador Retriever" 2 0 28 250
+"cHD8_551" "Den" "Newfoundland" 2.8 0 46 317
+"cHD8_552" "Den" "Newfoundland" 5 0 48 277
+"cHD8_553" "Den" "Newfoundland" 5.2 0 54 341
+"cHD8_554" "Den" "Labrador Retriever" 2.5 0 31 324
+"cHD8_555" "Den" "Newfoundland" 6 0 54.5 306
+"cHD8_556" "Den" "Newfoundland" 4.5 0 63.4 260
+"cHD8_557" "Den" "Labrador Retriever" 4.5 0 30 316
+"cHD8_558" "Den" "Newfoundland" 4.1 1 58 210
+"cHD9_311" "Fin" "Dachshund" 5.2 1 11.3 198
+"cHD9_312" "Fin" "Dachshund" 4 1 8.7 287
+"cHD9_313" "Fin" "Dachshund" 4.6 1 10.4 233
+"cHD9_314" "Fin" "Dachshund" 2.1 1 8.2 241
+"cHD9_315" "Fin" "Dachshund" 3.6 1 10 284
+"cHD9_316" "Fin" "Dachshund" 2.8 1 12.5 248
+"cHD9_317" "Fin" "Dachshund" 2.4 1 11.1 275
+"cHD9_318" "Fin" "Dachshund" 4.8 1 11.8 281
+"cHD9_319" "Fin" "Dachshund" 2.7 1 8 236
+"cHD9_320" "Fin" "Dachshund" 2.7 1 9 289
+"cHD9_321" "Fin" "Dachshund" 5.6 1 14.4 296
+"cHD9_322" "Fin" "Dachshund" 5.4 1 11 273
+"cHD9_323" "Fin" "Dachshund" 5.9 1 12 275
+"cHD9_324" "Fin" "Dachshund" 4.6 1 9.9 261
+"cHD9_325" "Fin" "Dachshund" 2.9 1 13.4 298
+"cHD9_326" "Fin" "Dachshund" 3.9 1 8.6 223
+"cHD9_327" "Fin" "Dachshund" 4 1 9 259
+"cHD9_328" "Fin" "Dachshund" 2.5 1 9.8 231
+"cHD9_329" "Fin" "Dachshund" 3 1 11.7 273
+"cHD9_330" "Fin" "Dachshund" 3.2 1 7.9 217
+"cHD9_331" "Fin" "Dachshund" 5.8 1 10.3 266
+"cHD9_332" "Fin" "Dachshund" 2.1 1 7.6 234
+"cHD9_333" "Fin" "Dachshund" 2.7 1 9.8 249
+"cHD9_334" "Fin" "Dachshund" 4.7 1 9 244
+"cHD9_335" "Fin" "Finnish Lapphund" 4.1 1 19.3 315
+"cHD9_336" "Fin" "Finnish Lapphund" 5.7 1 18 304
+"cHD9_337" "Fin" "Finnish Lapphund" 4.4 1 22 326
+"cHD9_338" "Fin" "Finnish Lapphund" 3.1 1 15.5 311
+"cHD9_339" "Fin" "Finnish Lapphund" 3.2 1 16.4 340
+"cHD9_341" "Fin" "Finnish Lapphund" 4.3 1 17.4 269
+"cHD9_342" "Fin" "Finnish Lapphund" 4.1 1 18.3 335
+"cHD9_343" "Fin" "Finnish Lapphund" 2.7 1 17.9 293
+"cHD9_344" "Fin" "Finnish Lapphund" 3.7 1 22.6 315
+"cHD9_345" "Fin" "Finnish Lapphund" 3.6 1 18.8 293
+"cHD9_346" "Fin" "Finnish Lapphund" 5.7 1 26.6 300
+"cHD9_347" "Fin" "Finnish Lapphund" 3.1 1 20.4 297
+"cHD9_348" "Fin" "Finnish Lapphund" 2.8 1 21.9 324
+"cHD9_349" "Fin" "Finnish Lapphund" 3.5 1 25.8 258
+"cHD9_350" "Fin" "Finnish Lapphund" 4.6 1 19.9 260
+"cHD9_351" "Fin" "Finnish Lapphund" 1.1 1 19.8 318
+"cHD9_352" "Fin" "Finnish Lapphund" 2.2 1 18 286
+"cHD9_353" "Fin" "Finnish Lapphund" 3.9 1 22.3 276
+"cHD9_354" "Fin" "Finnish Lapphund" 2.7 1 19.7 237
+"cHD9_355" "Fin" "Finnish Lapphund" 2.4 1 17.9 284
+"cHD9_356" "Fin" "Finnish Lapphund" 3.2 1 27.2 282
+"cHD9_358" "Fin" "Finnish Lapphund" 5.9 1 16.9 287
+"cHD9_359" "Fin" "Finnish Lapphund" 5 1 19.2 223
+"cHD9_360" "Fin" "Finnish Lapphund" 3.3 1 22.9 304
+"cHD9_361" "Fin" "Finnish Lapphund" 2.7 1 20.8 292
+"cHD9_362" "Fin" "Finnish Lapphund" 3.9 1 23.4 226
+"cHD9_363" "Fin" "Finnish Lapphund" 2.2 1 17.9 254
+"cHD9_382" "Fin" "German Shepherd" 2.5 1 28.4 198
+"cHD9_383" "Fin" "German Shepherd" 3.9 1 35 283
+"cHD9_384" "Fin" "German Shepherd" 5 1 35.3 242
+"cHD9_385" "Fin" "German Shepherd" 3.5 1 34.5 247
+"cHD9_386" "Fin" "German Shepherd" 5.7 1 34.4 231
+"cHD9_387" "Fin" "German Shepherd" 3.6 1 35.5 262
+"cHD9_388" "Fin" "German Shepherd" 3.6 1 34.5 280
+"cHD9_389" "Fin" "German Shepherd" 4.2 1 30.5 248
+"cHD9_390" "Fin" "German Shepherd" 4.3 1 40.7 278
+"cHD9_391" "Fin" "German Shepherd" 4.6 1 44.5 252
+"cHD9_392" "Fin" "German Shepherd" 4 1 34 274
+"cHD9_393" "Fin" "German Shepherd" 2.5 1 34 265
+"cHD9_394" "Fin" "German Shepherd" 4.6 1 39 203
+"cHD9_395" "Fin" "German Shepherd" 4.1 1 35.2 273
+"cHD9_396" "Fin" "German Shepherd" 3.4 1 34.6 293
+"cHD9_397" "Fin" "German Shepherd" 3.2 1 36.7 295
+"cHD9_398" "Fin" "German Shepherd" 2.8 1 28.3 206
+"cHD9_399" "Fin" "German Shepherd" 2.4 1 35.2 273
+"cHD9_400" "Fin" "German Shepherd" 2 1 38 307
+"cHD9_401" "Fin" "German Shepherd" 1.1 1 34.5 269
+"cHD9_402" "Fin" "German Shepherd" 2.7 1 34.2 271
+"cHD9_403" "Fin" "German Shepherd" 4.8 1 36.4 250
+"cHD9_404" "Fin" "German Shepherd" 3.2 1 34 285
+"cHD9_405" "Fin" "German Shepherd" 4.6 1 36 283
+"cHD9_406" "Fin" "German Shepherd" 2.3 1 37.8 260
+"cHD9_407" "Fin" "German Shepherd" 4.1 1 35 239
+"cHD9_408" "Fin" "German Shepherd" 2 1 38.1 248
+"cHD9_409" "Fin" "German Shepherd" 3.4 1 43.3 257
+"cHD9_410" "Fin" "German Shepherd" 4.2 1 35.5 287
+"cHD9_411" "Fin" "German Shepherd" 6.1 1 34.9 289
+"cHD9_412" "Fin" "German Shepherd" 2 1 35 217
+"cHD9_413" "Fin" "German Shepherd" 2.5 1 36.8 247
+"cHD9_414" "Fin" "German Shepherd" 3.2 1 33.6 267
+"cHD9_415" "Fin" "German Shepherd" 3.6 1 37.4 327
+"cHD9_416" "Fin" "German Shepherd" 3.6 1 39 292
+"cHD9_417" "Fin" "German Shepherd" 2.6 1 38.4 221
+"cHD9_418" "Fin" "German Shepherd" 3.1 1 39.4 240
+"cHD9_419" "Fin" "German Shepherd" 1.1 1 30 295
+"cHD9_420" "Fin" "German Shepherd" 2.6 1 40.6 288
+"cHD9_421" "Fin" "German Shepherd" 3.5 1 33 291
+"cHD9_422" "Fin" "German Shepherd" 2.7 1 35.5 267
+"cHD9_423" "Fin" "German Shepherd" 2.5 1 37.5 313
+"cHD9_424" "Fin" "German Shepherd" 3.2 1 36.8 275
+"cHD9_425" "Fin" "German Shepherd" 4.4 1 36.2 289
+"cHD9_426" "Fin" "German Shepherd" 5.9 1 32 271
+"cHD9_427" "Fin" "German Shepherd" 2 1 35 254
+"cHD9_428" "Fin" "German Shepherd" 4 1 43.4 234
+"cHD9_429" "Fin" "German Shepherd" 2.4 1 44 245
+"cHD9_430" "Fin" "German Shepherd" 6 1 38.6 265

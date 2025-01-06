@@ -1,0 +1,219 @@
+---
+title: "Homework 3: Genotyping and GWAS Analysis"  
+author: "Almog Angel"  
+course: "Introduction to Bioinformatics - 236523"  
+students:  
+  - Name: "<student name 1>"  
+    ID: "<student ID 1>"  
+  - Name: "<student name 2>"  
+    ID: "<student ID 2>"  
+date: "02/01/2025"  
+output: html_document  
+---
+
+# **Study Overview**  
+
+In this homework assignment, we will analyze genotyping data from 9 dog breeds.  
+
+Read the paper *"The Shepherds’ Tale: A Genome-Wide Study across 9 Dog Breeds Implicates Two Loci in the Regulation of Fructosamine Serum Concentration in Belgian Shepherds"* by Forsberg et al.  
+Link: https://doi.org/10.1371/journal.pone.0123173
+
+Carefully review the **abstract**, **introduction**, **discussion**, and **GWAS results** sections, then answer the following questions:  
+
+# **Questions**  
+
+**1. Biological Context:**  
+- What is **fructosamine**, and why is it used as a biomarker in clinical studies? (Limit: 30 words)  
+- Which disease is associated with abnormal fructosamine levels?  
+
+```{}
+# Answer:
+
+```
+
+**2. Breed-Specific Risk:**  
+- Based on the paper, which dog breeds are at **low risk** and which are at **high risk** of developing this disease?  
+
+```{}
+# Answer:
+
+```
+
+**3. Study Objective and Hypothesis:**  
+- What is the primary objective of this study?  
+- Summarize the authors' main hypothesis (Limit: 100 words)  
+
+```{}
+# Answer:
+
+```
+
+**4. Dogs as Models for Diseases:**  
+- Why are domestic dogs considered valuable models for studying the genetics of **complex diseases**?  
+- What specific characteristics of domestic dogs make them particularly suitable for genetic studies, especially for **GWAS**?  
+
+```{}
+# Answer:
+
+```
+
+# **Setup and Data Loading**  
+
+**1. Load Required Packages**  
+```{r}
+library(statgenGWAS)
+library(factoextra)
+library(ggplot2)
+```
+
+**2. Set Working Directory**  
+```{r}
+
+```
+
+**3. Load and Inspect Data**  
+```{r}
+# Load data files
+geno <- read.table("dogs.geno") # SNP genotype matrix for 9 dog breeds  
+map <- read.table("dogs.map")   # SNP map: IDs, chromosome, and positions  
+pheno <- read.table("dogs.pheno", header = TRUE) # Phenotypic data and metadata  
+
+# Take a quick look at the datasets
+View(geno)
+View(map)
+View(pheno)
+```
+
+# **Part 1: Bobby and Population Genetics**
+
+Last month, you adopted a 2.5-year-old mixed-breed dog named Bobby.  
+He is very cute, friendly, and quite heavy (weighs 30kg).  
+Therefore, you are pretty confident he is a mix of big dog breeds.
+
+To solve the mystery of Bobby’s ancestry, you did what any reasonable person would do - asked your friend from the faculty of biology to genotype a sample of Bobby.
+
+For this part, we’re focusing only on "big dogs" (over 20kg) as candidates for Bobby’s relatives.  
+
+(1) Generate a boxplot to visualize body weight by breed
+  - Color and order the plot.  
+  - Label axes and remove NAs (pretty graphs = extra points!).  
+  - Need inspiration? Check out this site: https://www.r-graph-gallery.com/
+(2) Based on the boxplot, create a variable called `candidate_breeds` that stores the dog breeds weighing 20kg or more
+
+```{r}
+
+```
+
+- Think of a computational method that we learned in class that will help you visualize and decide what dog breed Bobby is most likely related to.
+(1) Use only data from `geno` that belongs to `candidate_breeds`
+(2) Load Bobby's genotyping results file: `bobby.geno`
+(3) Do not forget to plot (pretty graphs get extra points!)
+TIP: use one of `factoextra` functions for the visualization and color the different dogs breeds
+
+```{r}
+
+```
+
+
+- Answer the following questions:
+(1) Which dog breed is the most similar to Bobby?
+(2) Look at the clusters of Labrador, Belgian and German Shepherd and imagine lines that connect the centroids of those cluster which results in an equilateral triangle.
+Is it true to say that the similarity between Belgian Shepherd to German Shepherd is equal to the similarity between Belgian Shepherd to Labrador? Explain.
+
+```{}
+# Write yourt answers here:
+
+```
+
+
+# **Part 2: GWAS Analysis**
+
+- Make sure geno, map and pheno left unchanged.
+```{r}
+geno <- read.table("dogs.geno")
+map <- read.table("dogs.map")
+pheno <- read.table("dogs.pheno", header = T)
+```
+
+- Create a gData object and call it `gDataDogs`:
+(1) Make sure that your data match the instructions in `?createGData()`
+(2) Make a list called `dogsPhenoList` of different dog breeds out of `pheno` and use only the column `genotype` and `FRUCTO`
+```{r}
+
+```
+
+- Run a GWAS analysis for Belgian Shepherd with fructosamine concentrations:
+(1) Show the QQ- and Manhattan plots 
+(2) Print significant SNP(s)
+```{r}
+
+```
+
+- Answer the following questions using the QQ- and Manhattan plot:
+(1) While presenting your GWAS results in an international dog-lovers confrence, an elderly woman with a well-groomed Pekingese dog in her bag, challenge your interpretation from the QQ plot. She claims that the deviation observed in the QQ plot could be due to difference in the population structure rather than true genetic associations. Briefly describe how you would respond to her concerns given your QQ plot results.
+(2) A curious breeder from the audience, intrigued by the implications, posed the another question: "Could you explain how the location of these significant SNP(s) on your plot help us understand genetic associations with the trait?"
+
+```{}
+# Write yourt answers here:
+
+```
+
+
+- Make a boxplot of Fructosamine concentrations for different alleles in Belgian and German Shepherds:
+(1) Use only the genotypes of Labrador Retriever, Belgian and German Shepherd
+(2) The X-axis should be the different alleles (0, 1, and 2) of the most significant SNP from the Belgian Shepherd GWAS results
+(3) Remove rows with NAs in fructosamine concentrations
+
+```{r}
+
+```
+
+- Answer the following questions:
+(1) Describe the results from the box-plot with respect the three allels (0, 1 and 2) and the three dog breeds.
+(2) Name the most significant SNP, indicates the chromosome and positions.
+```{}
+# Write your answers here:
+
+```
+
+- Go to - "http://genome-euro.ucsc.edu/cgi-bin/hgGateway".
+- Select "Dog" from the list of species in the left.
+- Select dog assembly: "May 2005 (Broad/canFam2)".
+- Select and use the chromosome and position of the SNP from the first question and click "GO".
+- Click on the last layer in the genome browser (Simple Nucleotide Polymorphism - rs23514694)
+
+* The first part of this video can be useful: https://www.youtube.com/watch?v=8U5NhHofPI0
+
+(1) Write the nucleotides combinations of the three different alleles
+```{}
+# Write your answers here:
+
+```
+
+- Go back to the genome browser
+- Zoom out (x100) three times - in the top right.
+- Identify human proteins that are mapped using tBLAST to this dog genome region
+
+(2) Choose 5 proteins and check if they are mentioned in the paper. If they are mentioned, explain how they are relevant to the trait.
+```{}
+# Write your answers here:
+
+
+```
+
+- I asked ChatGPT to tell a joke about dog breeds:
+
+ChatGPT:
+"Why did the Dalmatian go to the eye doctor?
+Because he kept seeing spots everywhere!"
+
+
+- Answer the following questions:
+(1) On a scale of 1 to 10, how funny did you find this joke?  
+(2) If you have a better one, let me know so we will enjoy reading your homework :) - Kate will declare the winners which will receive great honor in our next tutorial
+```{}
+# Write your answers here:
+
+
+```
+
