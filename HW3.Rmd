@@ -3,9 +3,9 @@ title: "Homework 3: Genotyping and GWAS Analysis"
 author: "Almog Angel"  
 course: "Introduction to Bioinformatics - 236523"  
 students:  
-  - Name: "<student name 1>"  
-    ID: "<student ID 1>"  
-  - Name: "<student name 2>"  
+  - Name: "<Dana Nifadov>"  
+    ID: "<209381649>"  
+  - Name: "<Eva name 2>"  
     ID: "<student ID 2>"  
 date: "02/01/2025"  
 output: html_document  
