@@ -27,15 +27,17 @@ Carefully review the **abstract**, **introduction**, **discussion**, and **GWAS 
 - Which disease is associated with abnormal fructosamine levels?  
 
 ```{}
-# Answer:
-
+- Fructosamine reflects average blood glucose levels over 2–3 weeks, providing a short-term measure of glycemic control in clinical studies.
+- Diabetes mellitus is associated with abnormal fructosamine levels.
 ```
 
 **2. Breed-Specific Risk:**  
 - Based on the paper, which dog breeds are at **low risk** and which are at **high risk** of developing this disease?  
 
 ```{}
-# Answer:
+- Low Risk: Belgian Shepherds (Malinois subtype), German Shepherds, and Golden Retrievers are identified as being at low risk of developing diabetes mellitus.
+
+- High Risk: Terrier and Spaniel breeds are reported to have a high risk of developing diabetes mellitus.
 
 ```
 
@@ -44,8 +46,9 @@ Carefully review the **abstract**, **introduction**, **discussion**, and **GWAS 
 - Summarize the authors' main hypothesis (Limit: 100 words)  
 
 ```{}
-# Answer:
+- The primary objective of this study is to identify genetic factors influencing variation in serum fructosamine concentrations in dogs, with a focus on breed-specific differences, particularly in Belgian Shepherds, to understand potential protective mechanisms against diabetes mellitus.
 
+- The authors hypothesize that genetics play a big role in controlling fructosamine levels in dogs, and that this varies by breed. They believe that Belgian Shepherds might have developed genetic traits that help protect them from diabetes. Specifically, they found a key genetic region on chromosome 3 (CFA3) that seems to work together with another region on chromosome 5 (CFA5) to affect fructosamine levels. This could explain why breeds like Belgian Shepherds are less likely to get diabetes, possibly because they’ve been bred over time for traits that support better blood sugar control.
 ```
 
 **4. Dogs as Models for Diseases:**  
@@ -53,14 +56,16 @@ Carefully review the **abstract**, **introduction**, **discussion**, and **GWAS 
 - What specific characteristics of domestic dogs make them particularly suitable for genetic studies, especially for **GWAS**?  
 
 ```{}
-# Answer:
+- Domestic dogs share many complex diseases with humans, including diabetes mellitus, and have coexisted in similar environments, making them a good choice for studying shared genetic and environmental influences on disease.
+
+- Dogs have high genetic diversity between breeds but reduced variation within breeds due to selective breeding. This creates long haplotypes and clear genetic patterns, which simplify the identification of disease-associated loci in GWAS.
 
 ```
 
 # **Setup and Data Loading**  
 
 **1. Load Required Packages**  
-```{r}
+```{r message=FALSE, warning=FALSE}
 library(statgenGWAS)
 library(factoextra)
 library(ggplot2)
@@ -68,7 +73,7 @@ library(ggplot2)
 
 **2. Set Working Directory**  
 ```{r}
-
+setwd('/Users/danan/Library/CloudStorage/OneDrive-PlaytikaLtd/Documents/Studys/סמסטר ז/ביואינפורמטיקה/שב/HW3')
 ```
 
 **3. Load and Inspect Data**  
@@ -92,7 +97,7 @@ Therefore, you are pretty confident he is a mix of big dog breeds.
 
 To solve the mystery of Bobby’s ancestry, you did what any reasonable person would do - asked your friend from the faculty of biology to genotype a sample of Bobby.
 
-For this part, we’re focusing only on "big dogs" (over 20kg) as candidates for Bobby’s relatives.  
+For this part, we’re focusing *only* on "big dogs" (over 20kg) as candidates for Bobby’s relatives.  
 
 (1) Generate a boxplot to visualize body weight by breed
   - Color and order the plot.  
@@ -101,7 +106,38 @@ For this part, we’re focusing only on "big dogs" (over 20kg) as candidates for
 (2) Based on the boxplot, create a variable called `candidate_breeds` that stores the dog breeds weighing 20kg or more
 
 ```{r}
+# Filter out "big dogs" (over 20kg) and remove NAs
+big_dogs <- pheno[pheno$Body_weight > 20 & !is.na(pheno$Body_weight) & !is.na(pheno$Breed), ]
 
+# Load the "showtext" library for custom fonts
+library(showtext)
+font_add_google("Lobster", "lobster")
+font_add_google("Roboto", "roboto") 
+showtext_auto() # Enable the custom font for plots
+
+# Create a pastel rainbow palette
+pastel_rainbow <- scales::alpha(rainbow(7), 0.6) # 0.6 adjusts the transparency for a pastel look
+
+# Generate the boxplot with pastel rainbow colors
+ggplot(big_dogs, aes(x = Breed, y = Body_weight, fill = Breed)) +
+  geom_boxplot(outlier.shape = 21, outlier.size = 2, outlier.color = "black") + 
+  scale_fill_manual(values = pastel_rainbow) +  # Use the pastel rainbow palette
+  labs(
+    title = "Body Weight by Breed (Big Dogs Only)",
+    x = "Breed",
+    y = "Body Weight (kg)"
+  ) +
+  theme_light() + 
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, family = "roboto"), 
+    axis.text.y = element_text(family = "roboto"),                        
+    plot.title = element_text(hjust = 0.5, family = "lobster", size = 16), 
+    axis.title.x = element_text(family = "lobster"),                      
+    axis.title.y = element_text(family = "lobster")               
+  )
+
+# 2: S
+candidate_breeds <- unique(big_dogs$Breed) # Get unique breed names from big_dogs
 ```
 
 - Think of a computational method that we learned in class that will help you visualize and decide what dog breed Bobby is most likely related to.
@@ -110,18 +146,77 @@ For this part, we’re focusing only on "big dogs" (over 20kg) as candidates for
 (3) Do not forget to plot (pretty graphs get extra points!)
 TIP: use one of `factoextra` functions for the visualization and color the different dogs breeds
 
-```{r}
+```{r warning=FALSE}
+# Load required libraries
+library(factoextra) # For PCA visualization
+library(dplyr)      # For data manipulation
+
+# align columns:
+geno <- geno[, order(colnames(geno))]
+bobby_geno <- bobby_geno[, order(colnames(bobby_geno))]
+all.equal(colnames(geno), colnames(bobby_geno))
+
+# Match IDs of candidate breeds in pheno
+candidate_ids <- rownames(pheno[pheno$Breed %in% candidate_breeds, ])
+
+# Subset geno for these IDs
+geno_subset <- geno[rownames(geno) %in% candidate_ids, ]
+
+#make sure still aligned
+all(rownames(geno_subset) == candidate_ids) 
+# Load Bobby's genotyping results
+bobby_geno <- read.table("bobby.geno", header = TRUE, row.names = 1)
+
+# Add Bobby's data to geno_subset
+geno_combined <- rbind(geno_subset, bobby_geno)
+
+# Remove constant/zero-variance columns
+geno_clean <- geno_combined[, apply(geno_combined, 2, var) > 0]
+
+# Scale the data
+geno_matrix <- scale(geno_clean)
+# Perform PCA
+pca_results <- prcomp(geno_matrix, center = TRUE, scale. = TRUE)
+
+library(factoextra)
+# Add a column to indicate breeds, including Bobby
+geno_labels <- c(pheno$Breed[rownames(pheno) %in% rownames(geno_subset)], "Bobby")
+
+# Plot PCA
+fviz_pca_ind(
+  pca_results,
+  label = "none",                  # Do not label individual points
+  habillage = geno_labels,         # Color points by breed
+  addEllipses = TRUE,              # Add ellipses for breed clusters
+  ellipse.level = 0.95,            # 95% confidence level
+  repel = TRUE                     # Avoid overlapping labels
+) +
+  labs(
+    title = "PCA of Genetic Data: Bobby's Closest Breed",
+    x = "Principal Component 1",
+    y = "Principal Component 2"
+  ) +
+  theme_light() +
+  theme(
+    plot.title = element_text(hjust = 0.5, family = "lobster", size = 16),       
+    axis.title.x = element_text(hjust = 0.5, family = "roboto"),   
+    axis.title.y = element_text(hjust = 0.5, family = "roboto")    
+  )
+
 
 ```
 
 
 - Answer the following questions:
 (1) Which dog breed is the most similar to Bobby?
-(2) Look at the clusters of Labrador, Belgian and German Shepherd and imagine lines that connect the centroids of those cluster which results in an equilateral triangle.
-Is it true to say that the similarity between Belgian Shepherd to German Shepherd is equal to the similarity between Belgian Shepherd to Labrador? Explain.
+(2) Look at the clusters of Labrador, Belgian and German Shepherd and imagine lines that connect the centroids of those cluster which results in an equilateral triangle. Is it true to say that the similarity between Belgian Shepherd to German Shepherd is equal to the similarity between Belgian Shepherd to Labrador? Explain.
 
 ```{}
-# Write yourt answers here:
+(# Write yourt answers here:
+(1) Bobby is most similar to the Labrador Retriever, as the PCA plot shows his position is closest to the Labrador Retriever cluster.
+
+(2) It is not true to say that the similarity between Belgian Shepherd and German Shepherd is equal to the similarity between Belgian Shepherd and Labrador Retriever:
+Belgian Shepherd is genetically more similar to German Shepherd than to Labrador Retriever, as shown by the shorter PCA distance between their clusters.
 
 ```
 
