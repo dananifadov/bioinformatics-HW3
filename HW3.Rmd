@@ -5,8 +5,8 @@ course: "Introduction to Bioinformatics - 236523"
 students:  
   - Name: "<Dana Nifadov>"  
     ID: "<209381649>"  
-  - Name: "<Eva name 2>"  
-    ID: "<student ID 2>"  
+  - Name: "<Eva Poluliakhov>"  
+    ID: "<321882649>"  
 date: "02/01/2025"  
 output: html_document  
 ---
@@ -69,6 +69,11 @@ Carefully review the **abstract**, **introduction**, **discussion**, and **GWAS 
 library(statgenGWAS)
 library(factoextra)
 library(ggplot2)
+# Load the "showtext" library for custom fonts
+library(showtext)
+font_add_google("Lobster", "lobster")
+font_add_google("Roboto", "roboto") 
+showtext_auto() 
 ```
 
 **2. Set Working Directory**  
@@ -108,12 +113,6 @@ For this part, we’re focusing *only* on "big dogs" (over 20kg) as candidates f
 ```{r}
 # Filter out "big dogs" (over 20kg) and remove NAs
 big_dogs <- pheno[pheno$Body_weight > 20 & !is.na(pheno$Body_weight) & !is.na(pheno$Breed), ]
-
-# Load the "showtext" library for custom fonts
-library(showtext)
-font_add_google("Lobster", "lobster")
-font_add_google("Roboto", "roboto") 
-showtext_auto() # Enable the custom font for plots
 
 # Create a pastel rainbow palette
 pastel_rainbow <- scales::alpha(rainbow(7), 0.6) # 0.6 adjusts the transparency for a pastel look
@@ -234,6 +233,23 @@ pheno <- read.table("dogs.pheno", header = T)
 (1) Make sure that your data match the instructions in `?createGData()`
 (2) Make a list called `dogsPhenoList` of different dog breeds out of `pheno` and use only the column `genotype` and `FRUCTO`
 ```{r}
+
+map_temp <- map
+colnames(map_temp) <- c("snp", "chr", "pos")  # Rename columns for compatibility
+
+# Create gData object
+gDataDogs <- createGData(
+  geno = geno,        # Genotype data
+  map = map_temp,     # Temporary map with required column names
+  pheno = pheno,      # Phenotype data
+  kin = NULL,         # Kinship matrix (if applicable)
+  covar = NULL        # Covariate data (if applicable)
+)
+
+# Check the structure of the created gData object
+str(gDataDogs)
+# Check the structure of the created object
+str(gDataDogs)
 
 ```
 
