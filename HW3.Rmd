@@ -35,10 +35,9 @@ Carefully review the **abstract**, **introduction**, **discussion**, and **GWAS 
 - Based on the paper, which dog breeds are at **low risk** and which are at **high risk** of developing this disease?  
 
 ```{}
-- Low Risk: Belgian Shepherds (Malinois subtype), German Shepherds, and Golden Retrievers are identified as being at low risk of developing diabetes mellitus.
+- Low Risk: Boxers and the shepherd breeds are identified as being at low risk of developing diabetes mellitus.
 
-- High Risk: Terrier and Spaniel breeds are reported to have a high risk of developing diabetes mellitus.
-
+- High Risk: The remaining breeds are reported to have a high risk of developing diabetes mellitus.
 ```
 
 **3. Study Objective and Hypothesis:**  
@@ -48,7 +47,7 @@ Carefully review the **abstract**, **introduction**, **discussion**, and **GWAS 
 ```{}
 - The primary objective of this study is to identify genetic factors influencing variation in serum fructosamine concentrations in dogs, with a focus on breed-specific differences, particularly in Belgian Shepherds, to understand potential protective mechanisms against diabetes mellitus.
 
-- The authors hypothesize that genetics play a big role in controlling fructosamine levels in dogs, and that this varies by breed. They believe that Belgian Shepherds might have developed genetic traits that help protect them from diabetes. Specifically, they found a key genetic region on chromosome 3 (CFA3) that seems to work together with another region on chromosome 5 (CFA5) to affect fructosamine levels. This could explain why breeds like Belgian Shepherds are less likely to get diabetes, possibly because they’ve been bred over time for traits that support better blood sugar control.
+- The authors hypothesize that genetics play a big role in controlling fructosamine levels in dogs, and that this varies by breed. They believe that Belgian Shepherds might have developed genetic traits that help protect them from diabetes.
 ```
 
 **4. Dogs as Models for Diseases:**  
@@ -69,8 +68,10 @@ Carefully review the **abstract**, **introduction**, **discussion**, and **GWAS 
 library(statgenGWAS)
 library(factoextra)
 library(ggplot2)
-# Load the "showtext" library for custom fonts
-library(showtext)
+library(dplyr)      # For data manipulation
+library(knitr)
+
+library(showtext)   # Load the "showtext" library for custom fonts
 font_add_google("Lobster", "lobster")
 font_add_google("Roboto", "roboto") 
 showtext_auto() 
@@ -146,9 +147,7 @@ candidate_breeds <- unique(big_dogs$Breed) # Get unique breed names from big_dog
 TIP: use one of `factoextra` functions for the visualization and color the different dogs breeds
 
 ```{r warning=FALSE}
-# Load required libraries
-library(factoextra) # For PCA visualization
-library(dplyr)      # For data manipulation
+
 
 # Load Bobby's genotyping results
 bobby_geno <- read.table("bobby.geno", header = TRUE, row.names = 1)
@@ -234,23 +233,19 @@ pheno <- read.table("dogs.pheno", header = T)
 (1) Make sure that your data match the instructions in `?createGData()`
 (2) Make a list called `dogsPhenoList` of different dog breeds out of `pheno` and use only the column `genotype` and `FRUCTO`
 ```{r}
+colnames(map)[2:3] <- c("chr", "pos") # Rename Chromosome and Position columns
+rownames(map) <- map[["V1"]] # Use genotypes as row name
 
-map_temp <- map
-colnames(map_temp) <- c("snp", "chr", "pos")  # Rename columns for compatibility
+map <- map[order(rownames(map)), ]
+geno <- geno[, order(colnames(geno))]
 
-# Create gData object
-gDataDogs <- createGData(
-  geno = geno,        # Genotype data
-  map = map_temp,     # Temporary map with required column names
-  pheno = pheno,      # Phenotype data
-  kin = NULL,         # Kinship matrix (if applicable)
-  covar = NULL        # Covariate data (if applicable)
-)
+all(rownames(map) == colnames(geno))
 
-# Check the structure of the created gData object
-str(gDataDogs)
-# Check the structure of the created object
-str(gDataDogs)
+pheno$genotype <- rownames(pheno)
+dogsPhenoList <- split(x = pheno[c("genotype", "FRUCTO")], 
+                        f = pheno[["Breed"]])
+
+gDataDogs <- createGData(geno = geno, map = map, pheno = dogsPhenoList)
 
 ```
 
@@ -258,7 +253,39 @@ str(gDataDogs)
 (1) Show the QQ- and Manhattan plots 
 (2) Print significant SNP(s)
 ```{r}
+# Load necessary libraries
+library(statgenGWAS)
 
+# Run GWAS for Belgian Shepherds on Fructosamine concentration
+GWAS_BelgianShepherd <- runSingleTraitGwas(
+  gData = gDataDogs,
+  trials = "Belgian Shepherd",
+  traits = "FRUCTO"
+)
+
+# QQ Plot: Assess potential population structure or true associations
+plot(GWAS_BelgianShepherd, 
+     plotType = "qq", 
+     trait = "FRUCTO",
+     title = "QQ Plot - Belgian Shepherd GWAS")
+
+# Manhattan Plot: Identify genome-wide significant SNPs
+plot(GWAS_BelgianShepherd, 
+     plotType = "manhattan", 
+     trait = "FRUCTO",
+     title = "Manhattan Plot - Belgian Shepherd GWAS")
+
+# Extract and display significant SNPs
+significant_snps <- GWAS_BelgianShepherd$signSnp$"Belgian Shepherd"
+
+# Print results
+if (nrow(significant_snps) > 0) {
+  # Use kable to display the table
+  kable(significant_snps, row.names = FALSE, caption = "Significant SNPs") 
+} else {
+  # Print a friendly message
+  cat("\nNo SNPs passed the genome-wide significance threshold.\n")
+}
 ```
 
 - Answer the following questions using the QQ- and Manhattan plot:
@@ -266,7 +293,15 @@ str(gDataDogs)
 (2) A curious breeder from the audience, intrigued by the implications, posed the another question: "Could you explain how the location of these significant SNP(s) on your plot help us understand genetic associations with the trait?"
 
 ```{}
-# Write yourt answers here:
+1. In the observed QQ plot the x axis is the p-values under the null hypotesis and the y axis it the actual p values observed. In a proper GWAS we would expect most of the SNP to not have a significant effect and match the null hypotesis.
+Having a dot on the line meaning the p value matches the null hypotesis therefore not significant.
+The closer a dot to the upper right corner, the lower the p value of this SNP, therefore the higher the significance of it.
+Population structure creates genetic differences between different groups in the population and they effect the distribution of SNPs.This causes p values to be lower than we would expect even for random SNPs, so the QQ Plot moves away from the blue line from the start.
+Thus if we had deviation due to difference in the population structure we would likely see the whole SNP p values above the null hypotesis blue line for the whole plot.
+
+2. In the observed Manhattan plots the x axis is the chromosom in which the SNP is located and the y axis is the level of statictical significance of the SNP. The observed threshold is the level at which a SNP is considered statistically significant. Black/gray dots are SNPs without significant association while red dots are SNPs that passed the threshold of statistical significance, which may indicate a gene relevant to the trait under study.
+The plot shows highly significant SNP on Chromosome 3 (BICF2S2344808).
+
 
 ```
 
@@ -277,6 +312,34 @@ str(gDataDogs)
 (3) Remove rows with NAs in fructosamine concentrations
 
 ```{r}
+# Define the most significant SNP from GWAS results
+top_snp <- "BICF2S2344808"  # Replace with the actual significant SNP ID
+
+# Filter phenotype data for selected breeds (Belgian, German Shepherds, and Labrador Retrievers)
+selected_breeds <- c("Belgian Shepherd", "German Shepherd", "Labrador Retriever")
+pheno_filtered <- subset(pheno, Breed %in% selected_breeds) %>% subset(!is.na(FRUCTO))
+pheno_filtered$Allele <- geno[pheno_filtered$genotype,top_snp] 
+
+# Define a pastel rainbow color palette for breeds
+pastel_rainbow <- alpha(rainbow(length(selected_breeds)), 0.6) # Adjust transparency for pastel look
+
+# Generate the boxplot
+ggplot(pheno_filtered, aes(x = factor(Allele), y = FRUCTO, fill = Breed)) +
+  geom_boxplot(outlier.shape = 21, outlier.size = 2, outlier.color = "black") + 
+  scale_fill_manual(values = pastel_rainbow) +  # Use the pastel rainbow palette
+  labs(
+    x = "SNP Allele (0, 1, 2)",
+    y = "Fructosamine Concentration"
+  ) +
+  theme_light() + 
+  theme(
+    axis.text.x = element_text(hjust = 1, family = "roboto"), 
+    axis.text.y = element_text(family = "roboto"),                        
+    plot.title = element_text(hjust = 0.5, family = "lobster", size = 16), 
+    axis.title.x = element_text(family = "lobster"),                      
+    axis.title.y = element_text(family = "lobster")
+  ) + ggtitle("Fructosamine Concentrations by SNP Allele\n(Belgian Shepherd, German Shepherds, Labradors)")
+
 
 ```
 
@@ -284,7 +347,17 @@ str(gDataDogs)
 (1) Describe the results from the box-plot with respect the three allels (0, 1 and 2) and the three dog breeds.
 (2) Name the most significant SNP, indicates the chromosome and positions.
 ```{}
-# Write your answers here:
+1.
+In the boxplot, the x axis is different SNP alleles (0, 1, 2) in Belgian Shepherds, German Shepherds, and Labrador Retrievers and the y axis is the fructosamine concentration for each of the SNP alleles by breed.
+Results by allels:
+Allel 0: Highest median of fructosamine concentration observed in the Labrador breed while the variaty of fructosamine concentration is similar to Belgian and German Shepherd, although German's Shepherd median is slightly higher.
+Allel 1: Highest median with a wide spread of fructosamine concentration observed in the Labrador breed, moderate fructosamine concentration for Belgian Shephard and very few data points for German Shephard.
+Allel 2: More variation observed between Belgian Shepherds and Labradors compared to German Shepherds. Highest median for Belgian Shepherd and high levels for Labrador.
+
+All together, Labrador Retrievers generally have higher fructosamine levels compared to Belgian and German Shepherds, SNP allele 2 is associated with the highest fructosamine levels, especially in Labrador Retrievers and Belgian Shepherds and German Shepherds tend to have lower fructosamine levels, especially with allele 0.
+
+2.
+The most significant SNP is BICF2S2344808, located in chromosome 3, postion 65209415.
 
 ```
 
@@ -298,8 +371,10 @@ str(gDataDogs)
 
 (1) Write the nucleotides combinations of the three different alleles
 ```{}
-# Write your answers here:
-
+The observed is C/T and the reference allele is C thus:
+allel 0 is C/C
+allel 1 is C/T
+allel 2 is T/T
 ```
 
 - Go back to the genome browser
@@ -308,9 +383,23 @@ str(gDataDogs)
 
 (2) Choose 5 proteins and check if they are mentioned in the paper. If they are mentioned, explain how they are relevant to the trait.
 ```{}
-# Write your answers here:
+5 human proteins that are mapped to the above dog genome region are:
+1. CAPN5
+2. FGFR3
+3. GAPDH
+4. MAEA
+5. WHSC1
 
+Out of them, FGFR3, GAPDH and WHSC1 appear in the study.
 
+FGFR3:
+Part of the cell growth, development, and metabolism. Its signal involved in insulin sensitivity and glucose regulation, potentially affecting fructosamine levels.
+
+GAPDH:
+It's an enzyme in glycolysis, the pathway that breaks down glucose for energy. This directly affects glucose metabolism, influencing blood sugar levels and fructosamine concentration.
+
+WHSC1:
+Part of chromatin structure regulation and affecting gene expression. Could impact glucose metabolism genes, indirectly influencing fructosamine levels.
 ```
 
 - I asked ChatGPT to tell a joke about dog breeds:
@@ -324,8 +413,10 @@ Because he kept seeing spots everywhere!"
 (1) On a scale of 1 to 10, how funny did you find this joke?  
 (2) If you have a better one, let me know so we will enjoy reading your homework :) - Kate will declare the winners which will receive great honor in our next tutorial
 ```{}
-# Write your answers here:
+This is a really good plank joke. 
+Since you like plank jokes, here's our best try:
 
-
+איזה צבע נובח ?
+צהבהב
 ```
 
