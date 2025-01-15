@@ -150,6 +150,8 @@ TIP: use one of `factoextra` functions for the visualization and color the diffe
 library(factoextra) # For PCA visualization
 library(dplyr)      # For data manipulation
 
+# Load Bobby's genotyping results
+bobby_geno <- read.table("bobby.geno", header = TRUE, row.names = 1)
 # align columns:
 geno <- geno[, order(colnames(geno))]
 bobby_geno <- bobby_geno[, order(colnames(bobby_geno))]
@@ -163,8 +165,7 @@ geno_subset <- geno[rownames(geno) %in% candidate_ids, ]
 
 #make sure still aligned
 all(rownames(geno_subset) == candidate_ids) 
-# Load Bobby's genotyping results
-bobby_geno <- read.table("bobby.geno", header = TRUE, row.names = 1)
+
 
 # Add Bobby's data to geno_subset
 geno_combined <- rbind(geno_subset, bobby_geno)
