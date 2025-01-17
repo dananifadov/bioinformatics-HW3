@@ -347,8 +347,7 @@ ggplot(pheno_filtered, aes(x = factor(Allele), y = FRUCTO, fill = Breed)) +
 (1) Describe the results from the box-plot with respect the three allels (0, 1 and 2) and the three dog breeds.
 (2) Name the most significant SNP, indicates the chromosome and positions.
 ```{}
-1.
-In the boxplot, the x axis is different SNP alleles (0, 1, 2) in Belgian Shepherds, German Shepherds, and Labrador Retrievers and the y axis is the fructosamine concentration for each of the SNP alleles by breed.
+1. In the boxplot, the x axis is different SNP alleles (0, 1, 2) in Belgian Shepherds, German Shepherds, and Labrador Retrievers and the y axis is the fructosamine concentration for each of the SNP alleles by breed.
 Results by allels:
 Allel 0: Highest median of fructosamine concentration observed in the Labrador breed while the variaty of fructosamine concentration is similar to Belgian and German Shepherd, although German's Shepherd median is slightly higher.
 Allel 1: Highest median with a wide spread of fructosamine concentration observed in the Labrador breed, moderate fructosamine concentration for Belgian Shephard and very few data points for German Shephard.
@@ -356,8 +355,7 @@ Allel 2: More variation observed between Belgian Shepherds and Labradors compare
 
 All together, Labrador Retrievers generally have higher fructosamine levels compared to Belgian and German Shepherds, SNP allele 2 is associated with the highest fructosamine levels, especially in Labrador Retrievers and Belgian Shepherds and German Shepherds tend to have lower fructosamine levels, especially with allele 0.
 
-2.
-The most significant SNP is BICF2S2344808, located in chromosome 3, postion 65209415.
+2. The most significant SNP is BICF2S2344808, located in chromosome 3, postion 65209415.
 
 ```
 
